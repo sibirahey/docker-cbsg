@@ -7,7 +7,7 @@ while [ $httpstatus -ne "200" ]; do
   httpstatus=$(curl -s -o /dev/null -I -w "%{http_code}" http://couchbase-server:8091/pools/default/buckets/default)
 done
 
-sleep 5
+sleep 15
 
 sync_gateway /home/sync_gateway/sync_gateway.json
 
